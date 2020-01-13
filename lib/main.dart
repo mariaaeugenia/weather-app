@@ -43,7 +43,21 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     return Scaffold (
-      body: Text(Strings.appTitle),
+      backgroundColor: Colors.blue.shade500,
+      body: SafeArea(
+        child: Container(
+          child: Text(
+            "London",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 30
+            ),
+          ),
+          padding: EdgeInsets.only(top: 20)
+        ),
+      ) 
     );
   }
 }
